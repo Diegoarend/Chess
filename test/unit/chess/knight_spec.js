@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import Position from '../../../src/chess/position';
-import Knight from '../../../src/chess/knight';
+import Position from '../../../src/chess/Position';
+import Knight from '../../../src/chess/Knight';
 
 describe('Knight test', () => {
   it('Should set knight.position x to 0 and y to 1 when the square is A2', () => {

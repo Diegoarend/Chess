@@ -1,3 +1,6 @@
+// por enquanto na classe knight(cavalo) irei guardar a posição e todos os movimentos possíveis da mesma
+// bem como um método para pegar a posição atual e outro para setar uma posição futura
+
 import Position from './Position';
 
 class Knight {

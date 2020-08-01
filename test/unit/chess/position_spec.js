@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import Position from '../../../src/chess/position';
+import Position from '../../../src/chess/Position';
 
 describe('Position test', () => {
   it('Should set x to 0 and y to 1 when the square is A2', () => {
