@@ -1,15 +1,12 @@
 // arquivo próprio para cada recurso da api
 import express from 'express';
+import MovesController from '../controllers/moves';
 
 const router = express.Router();
 
+const movesController = new MovesController();
+
 router.get('/', (req, res) => {
-  const position = req.params;
-  const resp = [
-    [2, 0],
-    [2, 2],
-    [1, 3],
-  ];
-  return res.json(resp);
+  movesController.get(req, res);
 });
 export default router;
