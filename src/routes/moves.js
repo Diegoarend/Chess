@@ -10,6 +10,6 @@ router.get('/', (req, res) => {
     [2, 2],
     [1, 3],
   ];
-  return res.send(resp);
+  return res.json(resp);
 });
 export default router;
