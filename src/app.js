@@ -8,6 +8,13 @@ const app = express();
 app.use(express.json());
 // criamos uma rota GET e passamos a callback que será chamada quando o rota receber
 // uma requisição
-app.get('/', (req, res) => res.send('Hello World!'));
-
+app.get('/moves/:square', (req, res) => {
+  const position = req.params;
+  const resp = [
+    [2, 0],
+    [2, 2],
+    [1, 3],
+  ];
+  return res.send(resp);
+});
 export default app;
