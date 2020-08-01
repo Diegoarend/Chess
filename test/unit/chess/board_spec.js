@@ -1,7 +1,7 @@
 import { expect } from 'chai';
-import Position from '../../../src/chess/position';
-import Knight from '../../../src/chess/knight';
-import Board from '../../../src/chess/board';
+import Position from '../../../src/chess/Position';
+import Knight from '../../../src/chess/Knight';
+import Board from '../../../src/chess/Board';
 
 describe('Board test', () => {
   it('Should set knight in the 0,1 position at board and get the movesFromPiece', () => {
@@ -14,10 +14,14 @@ describe('Board test', () => {
       [2, 2],
       [1, 3],
     ];
+    const alpha = [
+      ['C', 0],
+      ['C', 2],
+      ['B', 3],
+    ];
     board.setAtPosition(knight.position.x, knight.position.y, knight);
     expect(board.getAtPosition(0, 1)).to.be.equal(knight);
-    expect(board.getAllMovesFromPiece(0, 1)).to.be.equal(
-      board.getAllMovesFromPiece(movesFromPiece)
-    );
+    expect(board.getAllMovesFromPiece(0, 1)).to.be.eql(movesFromPiece);
+    expect(board.getAlphaNumeric(movesFromPiece)).to.be.eql(alpha);
   });
 });
