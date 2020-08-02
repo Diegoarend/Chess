@@ -6,7 +6,7 @@ const router = express.Router();
 
 const movesController = new MovesController();
 
-router.get('/', (req, res) => {
+router.get('/:square', (req, res) => {
   movesController.get(req, res);
 });
 export default router;

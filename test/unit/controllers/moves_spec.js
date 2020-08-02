@@ -3,9 +3,9 @@ import MovesController from '../../../src/controllers/moves';
 
 describe('Routes: Moves', () => {
   const defaultMoves = [
-    ['C', 0],
-    ['C', 2],
-    ['B', 3],
+    ['C', 1],
+    ['C', 3],
+    ['B', 4],
   ];
 
   describe('get() moves/:square', () => {

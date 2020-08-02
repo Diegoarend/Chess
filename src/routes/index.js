@@ -6,7 +6,7 @@ import movesRoute from './moves';
 const router = express.Router();
 
 // passamos o prefixo e carregamos a rota de moves
-router.use('/moves/:square', movesRoute);
+router.use('/moves', movesRoute);
 
 router.get('/', (req, res) =>
   res.send(

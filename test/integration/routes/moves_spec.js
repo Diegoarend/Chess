@@ -5,9 +5,9 @@ const { expect } = require('chai');
 describe('Routes: Moves', () => {
   // movimento padrão retornado da rota com o id 'A2'
   const defaultMoves = [
-    ['C', 0],
-    ['C', 2],
-    ['B', 3],
+    ['C', 1],
+    ['C', 3],
+    ['B', 4],
   ];
 
   // suíte de teste relacionada ao método GET

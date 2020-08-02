@@ -15,9 +15,9 @@ describe('Board test', () => {
       [1, 3],
     ];
     const alpha = [
-      ['C', 0],
-      ['C', 2],
-      ['B', 3],
+      ['C', 1],
+      ['C', 3],
+      ['B', 4],
     ];
     board.setAtPosition(knight.position.x, knight.position.y, knight);
     expect(board.getAtPosition(0, 1)).to.be.equal(knight);

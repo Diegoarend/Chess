@@ -9,7 +9,7 @@ class Position {
     const coordenates = square.toLowerCase().split('');
 
     this.x = fila.indexOf(coordenates[0]);
-    this.y = parseInt(coordenates[1]) - 1;
+    this.y = parseInt(coordenates[1] - 1);
   }
 }
 
