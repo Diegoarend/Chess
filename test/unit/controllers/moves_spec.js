@@ -3,15 +3,15 @@ import MovesController from '../../../src/controllers/moves';
 
 describe('Routes: Moves', () => {
   const defaultMoves = [
-    [2, 0],
-    [2, 2],
-    [1, 3],
+    ['C', 0],
+    ['C', 2],
+    ['B', 3],
   ];
 
   describe('get() moves/:square', () => {
     it('should return a list of moves for a specific position', () => {
       // obj fake de requisição enviada pela rota do express
-      const request = {};
+      const request = { params: { square: 'A2' } };
       // obj fake de resposta enviada pela rota do express
       const response = {
         // adicionado spy do sinan para validar que o metodo send está chamada com o parâmetro certo

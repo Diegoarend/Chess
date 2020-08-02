@@ -5,9 +5,9 @@ const { expect } = require('chai');
 describe('Routes: Moves', () => {
   // movimento padrão retornado da rota com o id 'A2'
   const defaultMoves = [
-    [2, 0],
-    [2, 2],
-    [1, 3],
+    ['C', 0],
+    ['C', 2],
+    ['B', 3],
   ];
 
   // suíte de teste relacionada ao método GET
@@ -15,6 +15,7 @@ describe('Routes: Moves', () => {
   describe('GET /moves/:{square}', () => {
     it('should return a list of moves for a specific position', (done) => {
       request.get('/moves/A2').end((err, res) => {
+        console.log('response', res.body);
         expect(res.body).to.eql(defaultMoves);
         done(err);
       });
