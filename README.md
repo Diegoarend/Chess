@@ -38,3 +38,7 @@ export default MovesController;
 `npm install @babel/node`
 ### Run - Make sure your por port 3000 is free
 `npm run start:dev`
+
+
+Para contribuir sugiro seguir este tutorial:
+//github.com/firstcontributions/first-contributions/blob/master/translations/README.pt_br.md
