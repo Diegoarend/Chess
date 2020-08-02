@@ -11,6 +11,9 @@ Extra functionalities can be easily implemented given the abstraction of the log
 ### Usage
 
 #### Example code of the MovesController
+
+Right now where instanting numerous entities in each request for the sake of forecating one position, but that also can be easily changed
+
 ```javascript
 class MovesController {
   get(req, res) {

@@ -7,8 +7,7 @@ class Position {
   constructor(square) {
     const fila = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
     const coordenates = square.toLowerCase().split('');
-
-    console.log(coordenates.length);
+    // verifica se a posição informado é valida
     if (
       square.length > 2 ||
       fila.indexOf(coordenates[0]) > 0 ||
