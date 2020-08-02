@@ -35,4 +35,6 @@ export default MovesController;
 
 
 ### Install
-`npm install --save oop-chess`
+`npm install @babel/node`
+### Run - Make sure your por port 3000 is free
+`npm run start:dev`
