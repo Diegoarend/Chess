@@ -8,6 +8,16 @@ class Position {
     const fila = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
     const coordenates = square.toLowerCase().split('');
 
+    console.log(coordenates.length);
+    if (
+      square.length > 2 ||
+      fila.indexOf(coordenates[0]) > 0 ||
+      coordenates[1] > 8 ||
+      coordenates[1] <= 0
+    ) {
+      return (this.x = -99);
+    }
+
     this.x = fila.indexOf(coordenates[0]);
     this.y = parseInt(coordenates[1] - 1);
   }

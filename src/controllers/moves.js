@@ -7,6 +7,7 @@ class MovesController {
     const { square } = req.params;
     const board = new Board();
     const position = new Position(square);
+    if (position.x === -99) return res.send('Posição Inválida');
     const knight = new Knight(position);
     board.setAtPosition(knight.position.x, knight.position.y, knight);
     const allMoves = board.getAllMovesFromPiece(
