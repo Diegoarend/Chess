@@ -27,23 +27,29 @@ class Board {
 
   // pega todos os movimentos que a peça pode fazer(desde que não saia do board)
   getAllMovesFromPiece(x, y) {
-    const nextMoves = [];
-    for (const move of this.matrix[`${x}_${y}`].moves) {
-      const tX = x + move[0];
-      const tY = y + move[1];
-      if (!this.outOfLimit(tX, tY)) {
-        nextMoves.push([tX, tY]);
+    function filterby(move) {
+      if (!(move[0] <= -1 || move[0] >= 8 || move[1] <= -1 || move[1] >= 8)) {
+        move = [move[0], move[1]];
+        return move;
       }
     }
+
+    function sum(move) {
+      move[0] += x;
+      move[1] += y;
+      return move;
+    }
+    const nextMoves = this.matrix[`${x}_${y}`].moves.map(sum).filter(filterby);
+
     return nextMoves;
   }
 
-  // traduz as coordenadas utilizadas para movimentos do jogo
   getAlphaNumeric(nextMoves) {
     const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-    const proxPosicoes = nextMoves.map(
-      (move) => (move = [rows[move[0]], move[1] + 1])
-    );
+    const proxPosicoes = nextMoves.map((move) => {
+      move = [rows[move[0]], move[1] + 1];
+      return move;
+    });
     return proxPosicoes;
   }
 }
