@@ -14,11 +14,12 @@ class Position {
       coordenates[1] > 8 ||
       coordenates[1] <= 0
     ) {
-      return (this.x = -99);
+      this.x = -99;
+      return this.x;
     }
 
     this.x = fila.indexOf(coordenates[0]);
-    this.y = parseInt(coordenates[1] - 1);
+    this.y = parseInt(coordenates[1] - 1, 10);
   }
 }
 
