@@ -1,4 +1,5 @@
 import sinon from 'sinon';
+import chai from 'chai';
 import MovesController from '../../../src/controllers/moves';
 
 describe('Routes: Moves', () => {

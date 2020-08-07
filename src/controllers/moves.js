@@ -2,6 +2,7 @@ import Position from '../chess/Position';
 import Knight from '../chess/Knight';
 import Board from '../chess/Board';
 
+
 class MovesController {
   get(req, res) {
     const { square } = req.params;

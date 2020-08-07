@@ -2,6 +2,8 @@ module.exports = {
   env: {
     browser: true,
     es2020: true,
+    mocha: true,
+    chai: true,
   },
   extends: ['airbnb-base', 'prettier'],
   plugins: ['prettier'],
