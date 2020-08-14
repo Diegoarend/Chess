@@ -1,7 +1,7 @@
 Chess API
 ----------------
 
-This is project has an API to get all the possible moves from a piece(for now just the Knight Piece) in a certain position and also a back-end chess engine made with OOP(in progress).
+This  project has an API to get all the possible moves from a piece(for now just the Knight Piece) in a certain position and also a back-end chess engine made with OOP(in progress).
 
 Example: To get all the movements of a knight piece in 'D5' just make a get request to '/moves/D5'
 
@@ -12,7 +12,7 @@ Extra functionalities can be easily implemented given the abstraction of the log
 
 #### Example code of the MovesController
 
-Right now where instanting numerous entities in each request for the sake of forecating one position, but that also can be easily changed
+Right now where instantiating numerous entities in each request for the purpose of forecating one position, but that also can be easily changed
 
 ```javascript
 class MovesController {
