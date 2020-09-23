@@ -5,7 +5,7 @@ This  project has an API to get all the possible moves from a piece(for now just
 
 Example: To get all the movements of a knight piece in 'D5' just make a get request to '/moves/D5'
 
-Extra functionalities can be easily implemented given the abstraction of the logic used.
+Extra functionalities can be easily implemented given the abstraction of the logic used .
 
 
 ### Usage
